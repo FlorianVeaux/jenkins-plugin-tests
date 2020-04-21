@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh 'echo $GIT_COMMIT'
                 sh 'echo $TEST_TAG'
+                sh 'export TEST_TAG=yolo'
                 sh 'sleep 20'
             }
         }

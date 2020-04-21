@@ -18,7 +18,7 @@ pipeline {
                 sh 'echo $GIT_COMMIT'
                 sh 'echo $TEST_TAG'
                 sh 'export TEST_TAG=yolo'
-                sh 'sleep 20'
+                sh 'sleep 10'
                 sh "printenv | sort"
             }
         }

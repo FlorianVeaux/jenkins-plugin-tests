@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo $BRANCH_NAME'
-                sh 'sleep 10'
+                sh 'sleep '30'
             }
         }
     }

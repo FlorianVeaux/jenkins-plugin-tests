@@ -19,6 +19,7 @@ pipeline {
                 sh 'echo $TEST_TAG'
                 sh 'export TEST_TAG=yolo'
                 sh 'sleep 20'
+                sh "printenv | sort"
             }
         }
     }

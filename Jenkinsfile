@@ -2,7 +2,7 @@ properties([
   [
     $class: 'DatadogJobProperty',
     enableProperty: true,
-    tagProperties: "commit=$GIT_COMMIT"
+    tagProperties: 'commit=$GIT_COMMIT'
   ]
 ])
 

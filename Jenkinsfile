@@ -2,7 +2,7 @@ properties([
   [
     $class: 'DatadogJobProperty',
     enableProperty: true,
-    tagProperties: "branch=\$BRANCH_NAME"
+    tagProperties: "commit=\$GIT_COMMIT"
   ]
 ])
 
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'echo $BRANCH_NAME'
+                sh 'echo $GIT_COMMIT'
                 sh 'sleep 20'
             }
         }

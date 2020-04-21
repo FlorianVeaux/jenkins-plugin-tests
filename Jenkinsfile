@@ -2,7 +2,7 @@ properties([
   [
     $class: 'DatadogJobProperty',
     enableProperty: true,
-    tagProperties: "time_tag=\$time"
+    tagProperties: "branch=\$BRANCH_NAME"
   ]
 ])
 
@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'sleep $time'
+                sh 'echo $BRANCH_NAME'
+                sh 'sleep 10'
             }
         }
     }

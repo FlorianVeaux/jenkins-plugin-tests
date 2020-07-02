@@ -1,13 +1,8 @@
-properties([
-  [
-    $class: 'DatadogJobProperty',
-    enableProperty: true,
-    tagProperties: "branch=\$BRANCH_NAME"
-  ]
-])
-
 pipeline { 
-    agent any 
+    agent any
+    options {
+        datadog(tags: ['hello:florian', "branch_name:$BRANCH_NAME"])
+    }
     stages {
         stage('Test') {
             steps {
